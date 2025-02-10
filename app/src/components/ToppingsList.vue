@@ -1,29 +1,46 @@
 <template>
-  <div>
+  <div class="bread-list">
     <BreadCard v-for="bread in breads" :key="bread.name" :bread="bread" />
-    <MeatCard v-for="meat in meats" :key="name" :meat="meat" />
-    <CheeseCard v-for="cheese in cheeses" :key="name" :cheese="cheese" />
-    <CondimentCard v-for="condiment in condiments" :key="name" :condiment="condiment" />
-    <VegetableCard v-for="vegetable in vegetables" :key="name" :vegetable="vegetable" />
+  </div>
+  <div class="meat-list">
+    <MeatCard v-for="meat in meats" :key="meat.name" :meat="meat" />
+  </div>
+  <div class="cheese-list">
+    <CheeseCard v-for="cheese in cheeses" :key="cheese.name" :cheese="cheese" />
+  </div>
+  <div class="condiment-list">
+    <CondimentCard v-for="condiment in condiments" :key="condiment.name" :condiment="condiment" />
+  </div>
+  <div class="vegetable-list">
+    <VegetableCard v-for="vegetable in vegetables" :key="vegetable.name" :vegetable="vegetable" />
   </div>
 </template>
 
 <script setup>
-defineProps({
-  bread: Object,
-  meat: Object,
-  cheese: Object,
-  condiment: Object,
-  vegetable: Object,
-})
+import BreadCard from './ToppingCard.vue'
+import MeatCard from './ToppingCard.vue'
+import CheeseCard from './ToppingCard.vue'
+import CondimentCard from './ToppingCard.vue'
+import VegetableCard from './ToppingCard.vue'
 const breads = [
-  { name: 'Wheat Bread', price: 1.5 },
-  { name: 'White Bread', price: 1.5 },
-  { name: 'Italian Bread', price: 1.5 },
-  { name: 'Malted Rye', price: 1.75 },
-  { name: 'Plain Wrap', price: 1.5 },
-  { name: 'Gluten Free Wrap', price: 2.0 },
-  { name: 'Multigrain Wrap', price: 1.75 },
+  {
+    name: 'Wheat Bread',
+    price: 1.5,
+    image:
+      'https://www.thedailymeal.com/img/gallery/every-subway-bread-option-ranked/wheat-bread-1686235927.webp',
+  },
+  {
+    name: 'White Bread',
+    price: 1.5,
+    image:
+      'https://www.thedailymeal.com/img/gallery/every-subway-bread-option-ranked/white-bread-1686235927.webp',
+  },
+  {
+    name: 'Italian Bread',
+    price: 1.5,
+    image:
+      'https://www.thedailymeal.com/img/gallery/every-subway-bread-option-ranked/italian-herb-cheese-1686235927.webp',
+  },
 ]
 
 const meats = [
