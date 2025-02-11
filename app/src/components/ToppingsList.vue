@@ -1,27 +1,24 @@
 <template>
-  <div class="bread-list">
-    <BreadCard v-for="bread in breads" :key="bread.name" :bread="bread" />
+  <div class="bread">
+    <ToppingCard v-for="bread in breads" :key="bread.name" :topping="bread" />
   </div>
-  <div class="meat-list">
-    <MeatCard v-for="meat in meats" :key="meat.name" :meat="meat" />
+  <div class="meat">
+    <ToppingCard v-for="meat in meats" :key="meat.name" :topping="meat" />
   </div>
-  <div class="cheese-list">
-    <CheeseCard v-for="cheese in cheeses" :key="cheese.name" :cheese="cheese" />
+  <div class="cheese">
+    <ToppingCard v-for="cheese in cheeses" :key="cheese.name" :topping="cheese" />
   </div>
-  <div class="condiment-list">
-    <CondimentCard v-for="condiment in condiments" :key="condiment.name" :condiment="condiment" />
+  <div class="condiment">
+    <ToppingCard v-for="condiment in condiments" :key="condiment.name" :topping="condiment" />
   </div>
-  <div class="vegetable-list">
-    <VegetableCard v-for="vegetable in vegetables" :key="vegetable.name" :vegetable="vegetable" />
+  <div class="vegetable">
+    <ToppingCard v-for="vegetable in vegetables" :key="vegetable.name" :topping="vegetable" />
   </div>
 </template>
 
 <script setup>
-import BreadCard from './ToppingCard.vue'
-import MeatCard from './ToppingCard.vue'
-import CheeseCard from './ToppingCard.vue'
-import CondimentCard from './ToppingCard.vue'
-import VegetableCard from './ToppingCard.vue'
+import ToppingCard from './ToppingCard.vue'
+
 const breads = [
   {
     name: 'Wheat Bread',

@@ -1,9 +1,5 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import ToppingsList from '@/components/ToppingsList.vue'
 </script>
 
-<template>
-  <main>
-    <TheWelcome />
-  </main>
-</template>
+<template></template>
