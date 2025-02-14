@@ -1,17 +1,17 @@
 <template>
-  <div class="bread">
+  <div class="topping">
     <ToppingCard v-for="bread in breads" :key="bread.name" :topping="bread" />
   </div>
-  <div class="meat">
+  <div class="topping">
     <ToppingCard v-for="meat in meats" :key="meat.name" :topping="meat" />
   </div>
-  <div class="cheese">
+  <div class="topping">
     <ToppingCard v-for="cheese in cheeses" :key="cheese.name" :topping="cheese" />
   </div>
-  <div class="condiment">
+  <div class="topping">
     <ToppingCard v-for="condiment in condiments" :key="condiment.name" :topping="condiment" />
   </div>
-  <div class="vegetable">
+  <div class="topping">
     <ToppingCard v-for="vegetable in vegetables" :key="vegetable.name" :topping="vegetable" />
   </div>
 </template>
